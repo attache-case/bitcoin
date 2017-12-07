@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 import sys
 from influxdb import InfluxDBClient
@@ -34,7 +35,7 @@ def fork():
     pid = os.fork()
 	
     if pid > 0:
-		f = open('/var/run/gpio_fan_controld.pid','w')
+		f = open('/var/run/run_api_daemon.pid','w')
         f.write(str(pid)+"\n")
         f.close()
         sys.exit()
