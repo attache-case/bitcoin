@@ -32,16 +32,15 @@ def run_api():
 			time.sleep(1)
 
 def fork():
-    pid = os.fork()
-	
-    if pid > 0:
+	pid = os.fork()
+	if pid > 0:
 		f = open('/var/run/run_api_daemon.pid','w')
-        f.write(str(pid)+"\n")
-        f.close()
-        sys.exit()
+		f.write(str(pid)+"\n")
+		f.close()
+		sys.exit()
  
-    if pid == 0:
+	if pid == 0:
 		run_api()
- 
+
 if __name__=='__main__': 
-        fork()
+	fork()
