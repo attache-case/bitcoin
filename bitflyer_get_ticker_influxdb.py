@@ -27,7 +27,7 @@ def run_api():
 			
 			client.write_points(json_body)
 			
-			time.sleep(15)
+			time.sleep(5)
 		except:
 			time.sleep(1)
 
