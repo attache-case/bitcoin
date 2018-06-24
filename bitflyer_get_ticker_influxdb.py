@@ -10,8 +10,8 @@ def run_api():
 	password = 'root'
 	dbname = 'bitcoin'
 
-	api = pybitflyer.API(api_key="6BfKj1imKGZyqc6cCSLrg4",
-						 api_secret="j/8IcBbL2jPe5qtVCmxB7+jzIvTzTogIeNXyys2A46s=")
+	api = pybitflyer.API(api_key=YOUR_API_KEY,
+						 api_secret=YOUR_API_SECRET) # write your api info here
 	client = InfluxDBClient("localhost", "8086", user, password, dbname)
 
 	while True:
